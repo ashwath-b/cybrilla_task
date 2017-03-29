@@ -1,0 +1,18 @@
+Assignment:
+------------------
+Use any language / framework you are comfortable to work with :
+
+---URL Shortener
+- Implement a URL shortener service.
+- It should pick up any URL
+- Convert the URL into a shorter form
+- When the user keys in the shorter URL, service should redirect to the original URL
+- Expose an API for the service
+
+Note:
+--------
+- Ensure that the code is as modular as possible.
+- Specs are must
+- Do not use Google APIs
+- Submission on or before ​29th March 2017
+- Share the GitHub link of the assignment

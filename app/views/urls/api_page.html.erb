@@ -1,0 +1,32 @@
+<div class="row" style="padding:20px;">
+  <h2>URL shortener API</h2><br/>
+
+  <p>
+      <h3>index:</h3>
+        curl -X GET http://my-domain.com/urls.json<br/>
+        <h4>OR</h4>
+        curl -X GET --data "page=1&size=10" http://my-domain.com/urls.json
+        <br/><br/>
+        <h4>Note:</h4>page number or size parameters if nil defaults to 1 & 10 respectively
+        And returns the paginated result with next and previous links.
+  </p>
+  <p>
+      <h3>show:</h3> curl -X GET http://my-domain.com/urls/:id.json
+  </p>
+  <p>
+      <h3>destroy:</h3>
+        curl -X DELETE http://my-domain.com/urls/:id.json
+  </p>
+  <p>
+      <h3>update:</h3>
+        curl -X PATCH --data "url[original_url]=http://www.url.com/index" http://my-domain.com/urls/:id.json
+  </p>
+  <p>
+      <h3>create:</h3>
+        curl -X POST --data "url[original_url]=http://www.url.com/index" http://my-domain.com/urls.json
+  </p>
+  <p>
+      <h3>redirect_to original_url:</h3>
+        curl -X GET http://my-domain.com/shorty.json
+  </p>
+</div>
