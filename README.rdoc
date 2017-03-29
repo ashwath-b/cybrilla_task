@@ -1,3 +1,5 @@
+App is deployed to heroku. Heroku Link: https://cybrilla-shorty-url.herokuapp.com/
+
 Assignment:
 ------------------
 Use any language / framework you are comfortable to work with :
