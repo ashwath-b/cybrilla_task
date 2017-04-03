@@ -1,32 +1,62 @@
 <div class="row" style="padding:20px;">
   <h2>URL shortener API</h2><br/>
-
+  <h2>API Request</h2>
+  <p>
+    <h3>Listing the URLs</h3>
+     url: <%= root_url %>urls.json<br/>
+     method: GET<br/>
+  </p>
+  <p>
+    <h3>Retrieving URL detail</h3>
+    url: <%= root_url %>urls/:id.json<br/>
+    method: GET<br/>
+  </p>
+  <p>
+    <h3>Deleting URL</h3>
+    url: <%= root_url %>urls/:id.json<br/>
+    method: DELETE<br/>
+  </p>
+  <p>
+    <h3>Updating URL</h3>
+    url: <%= root_url %>urls/:id.json<br/>
+    method: PATCH
+  </p>
+  <p>
+    <h3>Creating URL</h3>
+    url: <%= root_url %>urls.json<br/>
+    method: POST<br/>
+  </p>
+  <p>
+    <h3>redirect_to original_url:</h3> <%= root_url %>shorty.json
+  </p>
+  <hr/>
+  <h2>To test from console</h2>
   <p>
       <h3>index:</h3>
-        curl -X GET http://my-domain.com/urls.json<br/>
+        curl -X GET <%= root_url %>urls.json<br/>
         <h4>OR</h4>
-        curl -X GET --data "page=1&size=10" http://my-domain.com/urls.json
+        curl -X GET --data "page=1&size=10" <%= root_url %>urls.json
         <br/><br/>
         <h4>Note:</h4>page number or size parameters if nil defaults to 1 & 10 respectively
         And returns the paginated result with next and previous links.
   </p>
   <p>
-      <h3>show:</h3> curl -X GET http://my-domain.com/urls/:id.json
+      <h3>show:</h3> curl -X GET <%= root_url %>urls/:id.json
   </p>
   <p>
       <h3>destroy:</h3>
-        curl -X DELETE http://my-domain.com/urls/:id.json
+        curl -X DELETE <%= root_url %>urls/:id.json
   </p>
   <p>
       <h3>update:</h3>
-        curl -X PATCH --data "url[original_url]=http://www.url.com/index" http://my-domain.com/urls/:id.json
+        curl -X PATCH --data "url[original_url]=http://www.url.com/index" <%= root_url %>urls/:id.json
   </p>
   <p>
       <h3>create:</h3>
-        curl -X POST --data "url[original_url]=http://www.url.com/index" http://my-domain.com/urls.json
+        curl -X POST --data "url[original_url]=http://www.url.com/index" <%= root_url %>urls.json
   </p>
   <p>
       <h3>redirect_to original_url:</h3>
-        curl -X GET http://my-domain.com/shorty.json
+        curl -X GET <%= root_url %>shorty.json
   </p>
 </div>
